@@ -1,0 +1,35 @@
+name: 🚀 New User Story
+description: Define a new piece of work from the user's perspective.
+title: "[Story]: Brief, action-oriented title here"
+labels: ["story", "P3"] # Optional: Auto-apply labels
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## User Story Definition
+        *(The Card)*
+  - type: textarea
+    id: story
+    attributes:
+      label: Story (As a... I want... so that...)
+      description: Complete the standard story format.
+      placeholder: As a [Persona], I want [Action], so that [Value/Goal].
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Acceptance Criteria
+        *(The Confirmation - Use Gherkin Syntax)*
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance Criteria (GIVEN/WHEN/THEN)
+      description: List the conditions that must be met for this story to be considered 'Done'.
+      value: |
+        - [ ] GIVEN [Context], WHEN [Action], THEN [Outcome]
+        - [ ] GIVEN [Context], WHEN [Action], THEN [Outcome]
+    validations:
+      required: true
