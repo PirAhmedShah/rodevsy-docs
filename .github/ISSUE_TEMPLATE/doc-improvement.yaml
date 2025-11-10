@@ -1,0 +1,29 @@
+name: ✍️ Documentation Improvement
+description: Clarify, restructure, or refactor existing content for better quality/readability.
+title: "[Improve] Refactor [File Name] for better flow"
+labels: ["type: doc-improvement"]
+
+body:
+  - type: input
+    id: target_file
+    attributes:
+      label: Target File/Area
+      description: Path to the documentation file or section being improved (e.g., docs/api/v1.md).
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation for Improvement (The Problem)
+      description: Why is this change needed? (e.g., "The section is too dense," "The organization is confusing.")
+    validations:
+      required: true
+      
+  - type: textarea
+    id: change_summary
+    attributes:
+      label: Proposed Changes
+      description: Briefly outline what will be done (e.g., "Break single page into two," "Add more introductory context").
+    validations:
+      required: true

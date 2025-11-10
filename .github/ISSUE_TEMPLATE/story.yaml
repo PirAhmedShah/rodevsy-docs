@@ -1,35 +1,38 @@
-name: 🚀 New User Story
-description: Define a new piece of work from the user's perspective.
-title: "[Story]: Brief, action-oriented title here"
-labels: ["story", "P3"] # Optional: Auto-apply labels
+name: 🚀 New User Story (Feature/Content)
+description: Define a new piece of content or functionality to be documented.
+title: "[Story] Implement documentation for [Specific Feature]"
+labels: ["type: story"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        ## User Story Definition
-        *(The Card)*
+        ## User Story & Goal
+  
   - type: textarea
-    id: story
+    id: story_statement
     attributes:
-      label: Story (As a... I want... so that...)
-      description: Complete the standard story format.
-      placeholder: As a [Persona], I want [Action], so that [Value/Goal].
+      label: Story Statement
+      description: What value are you documenting? (As a [Persona], I want [Action], so that [Value/Goal].)
+      placeholder: As an API user, I want clear examples for the new endpoint, so that I can integrate quickly.
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: |
-        ## Acceptance Criteria
-        *(The Confirmation - Use Gherkin Syntax)*
   - type: textarea
     id: criteria
     attributes:
-      label: Acceptance Criteria (GIVEN/WHEN/THEN)
-      description: List the conditions that must be met for this story to be considered 'Done'.
+      label: Definition of Done (Acceptance Criteria)
+      description: What must be true for this story to be complete? Use a checklist.
       value: |
-        - [ ] GIVEN [Context], WHEN [Action], THEN [Outcome]
-        - [ ] GIVEN [Context], WHEN [Action], THEN [Outcome]
+        - [ ] All new content is complete and reviewed.
+        - [ ] All code examples are tested and functional.
+        - [ ] New page is linked correctly in the sidebar/navigation.
     validations:
       required: true
+      
+  - type: input
+    id: initial_sp
+    attributes:
+      label: Initial Story Point Estimate (e.g., 3, 5, 8)
+    validations:
+      required: false

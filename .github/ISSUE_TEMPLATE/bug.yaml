@@ -1,0 +1,29 @@
+name: 🐛 Documentation Bug Report
+description: Report an error, inaccuracy, or broken link in existing documentation.
+title: "[Bug] Inaccurate description for [Topic Name]"
+labels: ["type: bug"]
+
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Affected Documentation Path
+      description: Provide the path to the `.md` file or the URL where the error occurs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: Current Incorrect Behavior/Text
+      description: What exactly is wrong or missing? (Copy the erroneous text if possible.)
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Correct Outcome
+      description: What should the documentation say or do instead?
+    validations:
+      required: true

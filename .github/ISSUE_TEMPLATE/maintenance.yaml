@@ -1,0 +1,25 @@
+name: 🔧 Repository Maintenance
+description: Routine tasks like link checking, dependency updates, or general cleanup.
+title: "[Maintenance] Update NPM dependencies/Check for dead links"
+labels: ["type: maintenance"]
+
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Maintenance Category
+      options:
+        - Tooling/Build System Update
+        - Link Validation/Cleanup
+        - Repository Cleanup (e.g., old files)
+        - SEO/Metadata Refresh
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Task Details
+      description: Briefly describe the specific files or packages being updated or cleaned.
+    validations:
+      required: true

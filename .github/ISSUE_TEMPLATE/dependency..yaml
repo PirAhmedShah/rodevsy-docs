@@ -1,0 +1,27 @@
+name: 🔗 External Dependency/Blocker
+description: Document work that cannot start until an external event or technical delivery occurs.
+title: "[Dependency] Documentation for [Feature X] is blocked"
+labels: ["type: dependency"]
+
+body:
+  - type: input
+    id: dependent_feature
+    attributes:
+      label: Documentation Feature Blocked
+      description: What specific documentation task are you waiting to start?
+    validations:
+      required: true
+
+  - type: input
+    id: blocker
+    attributes:
+      label: The Blocker (What are we waiting for?)
+      description: e.g., "New API Endpoint `/v2/users` delivery," or "Final legal sign-off on policy."
+    validations:
+      required: true
+      
+  - type: input
+    id: expected_resolution
+    attributes:
+      label: Expected Resolution Date (Optional)
+      description: When is the blocker expected to be resolved?
