@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37"></stop>
+      <stop offset="50%" stop-color="#f7c948"></stop>
+      <stop offset="100%" stop-color="#b38b2d"></stop>
+    </linearGradient>
+    
+    <mask id="diamond-cutout">
+      <rect width="100%" height="100%" fill="white"/>
+      <path d="M60 38 L75 60 L60 82 L45 60 Z" fill="black"></path>
+    </mask>
+  </defs>
+  
+  <circle cx="60" cy="60" r="35" fill="url(#gold-gradient)" mask="url(#diamond-cutout)"></circle>
+  
+  <circle cx="60" cy="60" r="8" fill="url(#gold-gradient)"></circle>
+</svg>
